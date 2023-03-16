@@ -170,6 +170,15 @@ function help() {
         var catColval = catLocation % 6;
         var rowval = parseInt(lastCheck / 6) ;
 }
+if ((Math.abs(catRowval - rowval) <= 1) && (Math.abs(catColval - columnval) <= 1)) { 
+            document.getElementById("help").innerHTML = "Help report: meow";
+        }else if ((Math.abs(mouseRowval - rowval) <= 1) && (Math.abs(mouseColval - columnval) <= 1)) {
+            document.getElementById("help").innerHTML = "Help report: squeek";
+        }else {
+            document.getElementById("help").innerHTML = "Help report: sorry, no help available";
+        }
+        penalty += 2;
+        document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
 let row=0;
 let row1=0;
 let row2=0
